@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <body>
+    <div class="calculadora-form">
+      <h2>Calculadora Fibonacci</h2>
+      <form id="calculadora-form" method="post">
+        <label for="txt_operador1">Longitud de la Secuencia Fibonacci:</label>
+        <input type="text" id="txt_operador1" name="txt_operador1" required />
+        <label for="txt_operador2">Operador2:</label>
+        <input type="text" id="txt_operador2" name="txt_operador2" required />
+        <select id="sel_operacion" name="sel_operacion">
+          <option value="+">Suma</option>
+          <option value="-">Resta</option>
+          <option value="*">Multiplicacion</option>
+          <option value="/">Division</option>
+        </select>
+        <button>Calcular</button>
+        <label id="lb_resultado"></label>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
