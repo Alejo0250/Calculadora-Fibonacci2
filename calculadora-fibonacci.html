@@ -2,13 +2,23 @@
 <html lang="es">
   <body>
     <div class="calculadora-form">
-      <h2>Calculadora Fibonacci</h2>
-      <form id="calculadora-form" method="post">
-        <label for="txt_operador1">Longitud de la Secuencia Fibonacci:</label>
-        <input type="text" id="txt_operador1" name="txt_operador1" required />
-        <button>Calcular</button>
-        <label id="lb_resultado"></label>
-      </form>
+      <h3>Secuencia de Fibonacci</h3>
+  <label>Longitud: <input id="size" type="number" value="10" min="0"></label>
+  <button onclick="gen()">Generar</button>
+  <pre id="out"></pre>
+
+  <script>
+    function gen() {
+      const size = parseInt(document.getElementById("size").value);
+      const fib = [0n, 1n];
+      let res = "";
+      for (let i = 0; i < size; i++) {
+        if (i > 1) fib.push(fib[i-1] + fib[i-2]);
+        res += fib[i] + " ";
+      }
+      document.getElementById("out").textContent = res.trim();
+    }
+  </script>
     </div>
     <script src="script.js"></script>
   </body>
