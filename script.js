@@ -1,4 +1,3 @@
-  <script>
     function gen() {
       const size = parseInt(document.getElementById("size").value);
       const fib = [0n, 1n];
@@ -9,4 +8,3 @@
       }
       document.getElementById("out").textContent = res.trim();
     }
-  </script>
