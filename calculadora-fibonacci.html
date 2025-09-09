@@ -6,19 +6,6 @@
   <label>Longitud: <input id="size" type="number" value="10" min="0"></label>
   <button onclick="gen()">Generar</button>
   <pre id="out"></pre>
-
-  <script>
-    function gen() {
-      const size = parseInt(document.getElementById("size").value);
-      const fib = [0n, 1n];
-      let res = "";
-      for (let i = 0; i < size; i++) {
-        if (i > 1) fib.push(fib[i-1] + fib[i-2]);
-        res += fib[i] + " ";
-      }
-      document.getElementById("out").textContent = res.trim();
-    }
-  </script>
     </div>
     <script src="script.js"></script>
   </body>
